@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Mugbot Interface Test</title>
+        
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+        <script src="jquery.min.js"></script>
+        <script src="jquery.mobile-1.4.5.min.js"></script>
+        
+        <script>
+            $(document).on("pageinit",function(e) {
+                ws = new WebSocket("ws://10.0.1.29:51234");
+                $('#slider').change(function() {
+                    var value = $('#slider').val();
+                    ws.send(value+"x");
+                })
+            });
+        </script>
+        
+    </head>
+    
+    <body>
+        <div id="page1" data-role="page">
+            <div data-role="header" data-theme="b">
+                <h1>Servo Slider</h1>
+            </div>
+            <div data-role="content" class="ui-content">
+                <input type="range" name="slider" id="slider" value="90" min="0" max="180" />
+            </div>
+            <div data-role="footer" data-theme="b">Mugbot Interface Test</div>
+        </div>
+    </body>
+</html>

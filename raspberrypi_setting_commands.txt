@@ -1,0 +1,18 @@
+Memo for myself
+
+
+- DHCP Server
+sudo nano /etc/dhcp/dhcpd.conf
+
+sudo nano /etc/default/isc-dhcp-server
+
+sudo nano /etc/rc.local
+
+- Check IP Address
+hostname -I
+
+- Set IP Address
+sudo nano /etc/dhcpcd.conf
+
+- Reload
+sudo /etc/init.d/dhcpcd reload

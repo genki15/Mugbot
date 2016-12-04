@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Mugbot Interface Test</title>
+        
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+        <script src="jquery.min.js"></script>
+        <script src="jquery.mobile-1.4.5.min.js"></script>
+        
+        <script>
+            $(function() {
+                ws = new WebSocket("ws://10.0.1.29:51234");
+                
+                $("#input").keypress(function(e) {
+                    if(e.keyCode == 13) {
+                        var val = $("#input").val();
+                        ws.send(val);
+                    }
+                });
+            });
+        </script>
+        
+    </head>
+    
+    <body>
+        <div id="page1" data-role="page">
+            <div data-role="header" data-theme="b">
+                <h1>Voice</h1>
+            </div>
+            <div data-role="content" class="ui-content">
+                <label for="textinput">話す：</label>
+                <input type="text" name="textinput" id="input" />
+            </div>
+            <div data-role="footer" data-theme="b">Mugbot Interface Test</div>
+        </div>
+    </body>
+</html>
