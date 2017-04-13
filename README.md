@@ -22,6 +22,6 @@ Action of the Mugbot can be controlled through the webpage, hosted on the Raspbe
 
 <br>
 
-The Mugbot system is developed at Tokyo City University.
+The Mugbot system is developed by Tokyo City University.
 
 For more information, check [mugbot.com](http://www.mugbot.com/) or their [repository on Github](https://github.com/mugbot/Mugbot-System)
